@@ -1,11 +1,15 @@
-export function initHeader() {
-  const menuBtn = document.querySelector(".menu-btn");
-  const menu = document.querySelector(".menu");
+﻿export function initHeader() {
+  const header = document.querySelector(".header-inner");
+  if (!header) return;
 
-  if (!menuBtn || !menu) return;
+  const onScroll = () => {
+    if (window.scrollY > 30) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
+  };
 
-  menuBtn.addEventListener("click", () => {
-    // menu.classList.toggle("is-open");
-    console.log("點按鈕")
-  });
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 }

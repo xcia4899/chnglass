@@ -4,7 +4,7 @@
 
 body {
   color: #222;
-  background: #f0f0f0;
+  background: #d1d1d1;
   margin: 0;
   font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", sans-serif;
 }
@@ -32,19 +32,46 @@ li {
 }
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 .header .header-inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1310px;
-  margin: 0 auto;
   height: 80px;
+  margin: 0 auto;
   padding-inline: clamp(20px, 2vw, 50px);
-  background: #975a3c;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   color: #fff;
+}
+.header .header-inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #975a3c;
+  z-index: -1;
+  transition: height 0.3s ease;
+}
+.header .header-inner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 1px;
+  width: 100%;
+  z-index: -2;
+}
+.header .header-inner.is-scrolled::after {
+  height: 100%;
 }
 .header .logo {
   font-size: 30px;
@@ -84,17 +111,6 @@ li {
 }
 .header .rightBox .menuToggler.is-open .text.close {
   display: inline-block;
-}
-.header::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 1px;
-  width: 100%;
-  z-index: -2;
 }
 
 .footer {
