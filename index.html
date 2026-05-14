@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chnglass</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+      .outerWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1;
+      }
+    </style>
   </head>
 
   <body>
-    <header id="header" class="header"></header>
-    <main id="main">
-      <h1>內容</h1>
-      <a href="">連結</a>
-    </main>
-    <footer id="footer"></footer>
-    
+    <div class="outerWrap">
+      <header id="header" class="header"></header>
+      <main id="main">
+        <h1>內容</h1>
+        <a href="">連結</a>
+      </main>
+      <footer id="footer" class="footer"></footer>
+    </div>
+
     <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,136 @@
+.footer {
+  background-color: #282828;
+  color: #fff;
+  padding-block: 100px;
+
+  .footer-inner {
+    max-width: 1310px;
+    padding-inline: clamp(20px, 2vw, 35px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .top {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+
+    .logo {
+      font-size: 30px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  .footerMenuBox {
+    .footerMenu {
+      display: flex;
+      gap: 16px;
+      font-weight: 600;
+
+      .menuItem {
+        position: relative;
+        transition: color 0.8s ease;
+        cursor: pointer;
+
+        span {
+          padding-right: 16px;
+          position: relative;
+        }
+
+        @media (hover:hover) {
+          &:hover {
+            color: #f5d09f;
+          }
+        }
+
+      }
+
+      .menuItem:not(:last-child) span::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 1px;
+        height: 90%;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .footerInfo {
+    font-size: 28px;
+    font-style: normal;
+
+    .tel {
+      display: flex;
+      margin-bottom: 50px;
+
+      .infoTitle {
+        padding-right: 10px;
+        margin-right: 10px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 1px;
+          height: 50%;
+          background-color: #fff;
+        }
+      }
+
+      a {
+        transition: color 0.8s ease;
+        cursor: pointer;
+
+        @media (hover:hover) {
+          &:hover {
+            color: #f5d09f;
+          }
+        }
+      }
+    }
+
+    .infoList {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid;
+
+      .infoItem {
+        flex: 0 0 33%;
+        display: grid;
+        gap: 20px;
+        font-size: 14px;
+        padding: 40px 0 30px;
+      }
+
+    }
+  }
+
+  .copyrightBox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #aaaaaa;
+    font-size: 14px;
+
+    .copyright p {
+      display: flex;
+      gap: 4px;
+    }
+
+    .ibestLink {
+      display: flex;
+      gap: 4px;
+    }
+  }
+}
