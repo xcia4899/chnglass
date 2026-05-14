@@ -5,7 +5,7 @@
 
   .header-inner {
     position: relative;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,9 +16,10 @@
     margin: 0 auto;
     padding-inline: clamp(20px, 2vw, 50px);
 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.6s ease 0.1s;
 
     color: #fff;
+
     &::after {
       content: "";
       position: absolute;
@@ -59,6 +60,7 @@
 
   .rightBox {
     height: 100%;
+    transition: transform 0.6s ease 0.1s;
 
     .menuToggler {
       display: flex;
@@ -86,9 +88,28 @@
       }
 
       .line {
+        position: relative;
         width: 30px;
         height: 8px;
-        background-color: #fff;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background-color: #975a3c;
+          transition: transform 0.2s;
+        }
+
+        &::before {
+          top: 0;
+        }
+
+        &::after {
+          bottom: 0;
+        }
       }
 
       &.is-open {
@@ -99,9 +120,25 @@
         .text.close {
           display: inline-block;
         }
+
+        .line {
+          &::before {
+            top: calc(50% - 1px);
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            top: calc(50% - 1px);
+            transform: rotate(-45deg);
+          }
+        }
       }
     }
   }
 
-
+  .header-inner.is-scrolled {
+    .rightBox {
+      transform: translateX(-20px);
+    }
+  }
 }
