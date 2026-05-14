@@ -22,6 +22,7 @@ a {
 }
 
 .header {
+  position: relative;
   width: 100%;
 }
 .header .header-inner {
@@ -40,17 +41,51 @@ a {
   font-weight: 600;
 }
 .header .rightBox {
-  display: flex;
-  gap: 20px;
+  height: 100%;
 }
-.header .rightBox .line {
+.header .rightBox .menuToggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #975a3c;
+  background-color: #f5d09f;
+  font-size: 15px;
+  font-family: Noto Sans TC;
+  font-weight: 800;
+  width: 144px;
+  height: 80px;
+  padding: 10px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.header .rightBox .menuToggler .text {
+  display: block;
+}
+.header .rightBox .menuToggler .text.close {
+  display: none;
+}
+.header .rightBox .menuToggler .line {
   width: 30px;
   height: 8px;
   background-color: #fff;
 }
-.header .rightBox.is-open {
-  opacity: 1;
-  background: #9b9b9b;
+.header .rightBox .menuToggler.is-open .text {
+  display: none;
+}
+.header .rightBox .menuToggler.is-open .text.close {
+  display: inline-block;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 1px;
+  width: 100%;
+  z-index: -2;
 }
 
 /*# sourceMappingURL=style.css.map */

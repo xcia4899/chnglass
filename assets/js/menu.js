@@ -1,11 +1,8 @@
 export function initMenu() {
-     console.log("loodedmenu");
-//   const menuBtn = document.querySelector(".menu-btn");
-//   const menu = document.querySelector(".menu");
+  const menuBtn = document.querySelector(".menuToggler");
+  if (!menuBtn) return;
 
-//   if (!menuBtn || !menu) return;
-
-//   menuBtn.addEventListener("click", () => {
-//     menu.classList.toggle("is-active");
-//   });
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("is-open");
+  });
 }
