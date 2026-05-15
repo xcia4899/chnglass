@@ -87,7 +87,7 @@
 .footer .footerInfo .infoList {
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 .footer .footerInfo .infoList .infoItem {
   flex: 0 0 33%;
