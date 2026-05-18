@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-
+  z-index: 100;
   .header-inner {
     position: relative;
 
@@ -14,7 +14,7 @@
     height: 80px;
 
     margin: 0 auto;
-    padding-inline: clamp(20px, 3vw, 50px);
+    padding-inline: clamp(20px, 3vw, 35px);
 
     transition: background-color 0.6s ease 0.1s ,padding 0.8s ease-in-out 0.1s;
 
@@ -74,7 +74,7 @@
       font-size: 15px;
 
       font-weight: 800;
-      width: 144px;
+      width: 160px;
       height: 80px;
       padding: 10px;
       margin-right: 30px;
