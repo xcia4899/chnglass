@@ -284,27 +284,25 @@ li {
   background-repeat: no-repeat;
 }
 .hero .titleBox .titleBox-inner {
-  flex: 0 0 60%;
-  margin-right: 50px;
   max-width: 340px;
+  margin-right: 80px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.hero .titleBox .subtitle {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.8;
-}
 .hero .titleBox .title {
-  margin-top: 4px;
   font-size: 60px;
   font-weight: 900;
 }
-.hero .titleBox .text {
+.hero .titleBox .subtitle {
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 700;
+}
+.hero .titleBox .text {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.8;
 }
 .hero .carousel {
   grid-area: 2/1/3/4;
@@ -442,10 +440,11 @@ li {
   color: #975a3c;
   font-weight: bolder;
 }
-.aboutBox .about-inner .top .titleBox .subtitle {
-  font-size: 52px;
-}
 .aboutBox .about-inner .top .titleBox .title {
+  font-size: 56px;
+  margin: 0;
+}
+.aboutBox .about-inner .top .titleBox .subtitle {
   font-size: 28px;
   margin: 0;
 }
