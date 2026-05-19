@@ -258,7 +258,7 @@
   display: block;
   width: 120px;
   height: 120px;
-  background-image: url(/assets/images/arrow.png);
+  background-image: url(../images/arrow.png);
   background-repeat: no-repeat;
   background-position: center;
   z-index: 1;
@@ -474,7 +474,7 @@
 .showCase .intro .btnArea .btn a::after {
   content: "";
   position: absolute;
-  background-image: url(/assets/images/arrow_btn.png);
+  background-image: url(../images/arrow_btn.png);
   background-repeat: no-repeat;
   top: calc(50% - 5px);
   right: 30px;
@@ -694,7 +694,7 @@
   display: block;
   width: 2px;
   height: 27px;
-  background-image: url(/assets/images/dotted_line.png);
+  background-image: url(../images/dotted_line.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
