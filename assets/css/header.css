@@ -3,6 +3,8 @@
   top: 0;
   width: 100%;
   z-index: 100;
+  transform: translateY(-100%);
+  animation: identifier 0.8s ease 1.2s forwards;
 }
 .header .header-inner {
   position: relative;
@@ -105,6 +107,14 @@
 }
 .header .header-inner.is-scrolled {
   padding-inline: 50px;
+}
+@keyframes identifier {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 /*# sourceMappingURL=header.css.map */
