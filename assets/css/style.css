@@ -298,17 +298,33 @@ li {
   font-size: 60px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
+  opacity: 0;
+  animation: fadeUp 0.8s ease-in-out forwards 0.2s;
 }
 .hero .titleBox .subtitle {
   font-size: 30px;
   font-weight: 700;
   font-family: inherit;
+  opacity: 0;
+  animation: fadeUp 0.8s ease-in-out forwards 0.4s;
 }
 .hero .titleBox .text {
   font-family: inherit;
   font-size: 15px;
   font-weight: 600;
   line-height: 1.8;
+  opacity: 0;
+  animation: fadeUp 0.8s ease-in-out forwards;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .hero .carousel {
   grid-area: 2/1/3/4;
@@ -319,6 +335,17 @@ li {
 }
 .hero .carousel .carousel-inner {
   width: 400px;
+  animation: carouselIn 0.8s ease-in-out forwards;
+}
+@keyframes carouselIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 .hero .carousel .swiper {
   width: 100%;
@@ -414,10 +441,15 @@ li {
   position: relative;
   grid-area: 1/4/3/9;
 }
+.hero .bg .img {
+  overflow: hidden;
+}
 .hero .bg .img img {
   display: block;
   object-fit: cover;
   filter: brightness(0.7);
+  transform: scale(1.05);
+  animation: bgScale 1.2s ease 0.4s forwards;
 }
 .hero .bg .scrollDown {
   position: absolute;
@@ -472,9 +504,11 @@ li {
   left: 0;
   bottom: 0px;
   z-index: 10;
+  opacity: 0;
+  animation: buttonRiseAni 0.8s ease 0.6s forwards;
 }
-.hero .bg .swiper-button-prev,
-.hero .bg .swiper-button-next {
+.hero .bg .swiper-buttons .swiper-button-prev,
+.hero .bg .swiper-buttons .swiper-button-next {
   position: relative;
   display: block;
   width: 120px;
@@ -484,8 +518,8 @@ li {
   inset: auto;
   overflow: hidden;
 }
-.hero .bg .swiper-button-prev span,
-.hero .bg .swiper-button-next span {
+.hero .bg .swiper-buttons .swiper-button-prev span,
+.hero .bg .swiper-buttons .swiper-button-next span {
   display: block;
   width: 120px;
   height: 120px;
@@ -494,8 +528,8 @@ li {
   background-position: center;
   z-index: 1;
 }
-.hero .bg .swiper-button-prev::after,
-.hero .bg .swiper-button-next::after {
+.hero .bg .swiper-buttons .swiper-button-prev::after,
+.hero .bg .swiper-buttons .swiper-button-next::after {
   content: "";
   position: absolute;
   left: 0;
@@ -508,16 +542,34 @@ li {
   transform-origin: right center;
   transition: transform 0.6s ease;
 }
-.hero .bg .swiper-button-prev .swiper-navigation-icon,
-.hero .bg .swiper-button-next .swiper-navigation-icon {
+.hero .bg .swiper-buttons .swiper-button-prev .swiper-navigation-icon,
+.hero .bg .swiper-buttons .swiper-button-next .swiper-navigation-icon {
   display: none;
 }
-.hero .bg .swiper-button-prev:hover::after,
-.hero .bg .swiper-button-next:hover::after {
+.hero .bg .swiper-buttons .swiper-button-prev:hover::after,
+.hero .bg .swiper-buttons .swiper-button-next:hover::after {
   transform: scaleX(1);
 }
-.hero .bg .swiper-button-next {
+.hero .bg .swiper-buttons .swiper-button-next {
   transform: rotate(180deg);
+}
+@keyframes buttonRiseAni {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bgScale {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .aboutBox {
