@@ -4,7 +4,7 @@
   padding-block: 100px;
 }
 .footer .footer-inner {
-  max-width: 1310px;
+  max-width: 1380px;
   padding-inline: clamp(20px, 2vw, 35px);
   margin: 0 auto;
   display: flex;
@@ -101,11 +101,14 @@
   align-items: center;
   gap: 16px;
   color: #aaaaaa;
-  font-size: 14px;
+  font-size: 13px;
 }
 .footer .copyrightBox .copyright p {
   display: flex;
   gap: 4px;
+}
+.footer .copyrightBox .copyright p .year {
+  margin-left: 5px;
 }
 .footer .copyrightBox .ibestLink {
   display: flex;
