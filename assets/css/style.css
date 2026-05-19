@@ -433,20 +433,28 @@ li {
   position: absolute;
   left: 0;
   bottom: 0px;
-  width: 120px;
-  height: 240px;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 .hero .bg .swiper-button-prev,
 .hero .bg .swiper-button-next {
+  position: static;
   display: block;
   width: 120px;
   height: 120px;
   background-color: #282828;
   margin: 0;
+  background-image: url(/assets/images/arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero .bg .swiper-button-prev .swiper-navigation-icon,
+.hero .bg .swiper-button-next .swiper-navigation-icon {
+  display: none;
+}
+.hero .bg .swiper-button-next {
+  transform: rotate(180deg);
 }
 
 .aboutBox {
