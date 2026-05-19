@@ -48,25 +48,25 @@
                   <div class="swiper-slide card">
                     <span class="number">02</span>
                     <div class="img">
-                      <img src="./assets/images/10009.png" alt="" />
+                      <img src="./assets/images/10010.png" alt="" />
                     </div>
 
                     <div class="text">
-                      <div class="title">大四方附大香菇</div>
-                      <div class="subtitle">SQUARE SHAKER MUSHROOM TOP</div>
-                      <span class="model">2OZ</span>
+                      <div class="title">大八角附大香菇</div>
+                      <div class="subtitle">PANELED GLASS SHAKER MUSHROOM TOP</div>
+                      <span class="model">3OZ</span>
                     </div>
                   </div>
                   <div class="swiper-slide card">
                     <span class="number">03</span>
                     <div class="img">
-                      <img src="./assets/images/10009.png" alt="" />
+                      <img src="./assets/images/10011.png" alt="" />
                     </div>
 
                     <div class="text">
-                      <div class="title">大四方附大香菇</div>
-                      <div class="subtitle">SQUARE SHAKER MUSHROOM TOP</div>
-                      <span class="model">2OZ</span>
+                      <div class="title">大T形瓶</div>
+                      <div class="subtitle">MODERN GLASS SHAKER</div>
+                      <span class="model">8OZ</span>
                     </div>
                   </div>
                 </div>
@@ -83,8 +83,8 @@
               <span class="line"></span>
             </div>
             <div class="swiper-buttons">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"><span></span></div>
+              <div class="swiper-button-next"><span></span></div>
             </div>
           </div>
         </div>
@@ -347,8 +347,15 @@
       },
       autoplay: {
         delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
-      loop :true
+      loop: true,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+      speed: 800,
     });
   </script>
 </html>

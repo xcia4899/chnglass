@@ -60,6 +60,9 @@
   height: 100%;
   position: relative;
 }
+.hero .carousel .card {
+  cursor: pointer;
+}
 .hero .carousel .card .number {
   position: absolute;
   top: 0;
@@ -71,6 +74,8 @@
 .hero .carousel .card .img {
   position: absolute;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 2s ease, transform 0.6s ease;
 }
 .hero .carousel .card .img img {
   object-fit: cover;
@@ -89,10 +94,14 @@
 .hero .carousel .card .text .title {
   font-size: 22px;
   font-weight: bolder;
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: color 0.6s ease;
 }
 .hero .carousel .card .text .subtitle {
   font-size: 14px;
   font-weight: bold;
+  opacity: 0;
 }
 .hero .carousel .card .text .subtitle::after {
   content: "";
@@ -103,9 +112,38 @@
   margin: 15px 0;
 }
 .hero .carousel .card .text .model {
-  margin-bottom: 28px;
+  display: block;
   font-size: 13px;
   font-weight: bold;
+  opacity: 0;
+}
+.hero .carousel .card:hover .img {
+  transform: scale(1.04);
+}
+.hero .carousel .card:hover .text .title {
+  color: #f5d09f;
+}
+.hero .carousel .card.swiper-slide-active .img {
+  opacity: 1;
+}
+.hero .carousel .card.swiper-slide-active .text .title {
+  animation: riseAni 0.8s ease-in-out forwards;
+}
+.hero .carousel .card.swiper-slide-active .text .subtitle {
+  animation: riseAni 0.8s ease-in-out forwards 0.4s;
+}
+.hero .carousel .card.swiper-slide-active .text .model {
+  animation: riseAni 0.8s ease-in-out forwards 0.6s;
+}
+@keyframes riseAni {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 .hero .bg {
   position: relative;
@@ -169,24 +207,49 @@
   left: 0;
   bottom: 0px;
   z-index: 10;
-  display: flex;
-  flex-direction: column;
 }
 .hero .bg .swiper-button-prev,
 .hero .bg .swiper-button-next {
-  position: static;
+  position: relative;
   display: block;
   width: 120px;
   height: 120px;
   background-color: #282828;
   margin: 0;
+  inset: auto;
+  overflow: hidden;
+}
+.hero .bg .swiper-button-prev span,
+.hero .bg .swiper-button-next span {
+  display: block;
+  width: 120px;
+  height: 120px;
   background-image: url(/assets/images/arrow.png);
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 1;
+}
+.hero .bg .swiper-button-prev::after,
+.hero .bg .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5d09f;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.6s ease;
 }
 .hero .bg .swiper-button-prev .swiper-navigation-icon,
 .hero .bg .swiper-button-next .swiper-navigation-icon {
   display: none;
+}
+.hero .bg .swiper-button-prev:hover::after,
+.hero .bg .swiper-button-next:hover::after {
+  transform: scaleX(1);
 }
 .hero .bg .swiper-button-next {
   transform: rotate(180deg);
