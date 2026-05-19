@@ -320,7 +320,12 @@ li {
 .hero .carousel .carousel-inner {
   width: 400px;
 }
-.hero .carousel .number {
+.hero .carousel .swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.hero .carousel .card .number {
   position: absolute;
   top: 0;
   right: 120px;
@@ -328,16 +333,16 @@ li {
   color: rgba(255, 255, 255, 0.1);
   z-index: 0;
 }
-.hero .carousel .img {
+.hero .carousel .card .img {
   position: absolute;
   z-index: 1;
 }
-.hero .carousel .img img {
+.hero .carousel .card .img img {
   object-fit: cover;
   height: 300px;
   width: 300px;
 }
-.hero .carousel .text {
+.hero .carousel .card .text {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -346,15 +351,15 @@ li {
   z-index: 1;
   gap: 12px;
 }
-.hero .carousel .text .title {
+.hero .carousel .card .text .title {
   font-size: 22px;
   font-weight: bolder;
 }
-.hero .carousel .text .subtitle {
+.hero .carousel .card .text .subtitle {
   font-size: 14px;
   font-weight: bold;
 }
-.hero .carousel .text .subtitle::after {
+.hero .carousel .card .text .subtitle::after {
   content: "";
   width: 30px;
   height: 2px;
@@ -362,7 +367,7 @@ li {
   display: block;
   margin: 15px 0;
 }
-.hero .carousel .text .model {
+.hero .carousel .card .text .model {
   margin-bottom: 28px;
   font-size: 13px;
   font-weight: bold;
@@ -423,6 +428,25 @@ li {
   100% {
     transform: translateX(100%);
   }
+}
+.hero .bg .swiper-buttons {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 120px;
+  height: 240px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+.hero .bg .swiper-button-prev,
+.hero .bg .swiper-button-next {
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-color: #282828;
+  margin: 0;
 }
 
 .aboutBox {

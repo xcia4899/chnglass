@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chnglass</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -25,15 +30,46 @@
           </div>
           <div class="carousel">
             <div class="carousel-inner">
-              <span class="number">01</span>
-              <div class="img">
-                <img src="./assets/images/10009.png" alt="" />
-              </div>
+              <!-- Swiper -->
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide card">
+                    <span class="number">01</span>
+                    <div class="img">
+                      <img src="./assets/images/10009.png" alt="" />
+                    </div>
 
-              <div class="text">
-                <div class="title">大四方附大香菇</div>
-                <div class="subtitle">SQUARE SHAKER MUSHROOM TOP</div>
-                <span class="model">2OZ</span>
+                    <div class="text">
+                      <div class="title">大四方附大香菇</div>
+                      <div class="subtitle">SQUARE SHAKER MUSHROOM TOP</div>
+                      <span class="model">2OZ</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <span class="number">02</span>
+                    <div class="img">
+                      <img src="./assets/images/10009.png" alt="" />
+                    </div>
+
+                    <div class="text">
+                      <div class="title">大四方附大香菇</div>
+                      <div class="subtitle">SQUARE SHAKER MUSHROOM TOP</div>
+                      <span class="model">2OZ</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <span class="number">03</span>
+                    <div class="img">
+                      <img src="./assets/images/10009.png" alt="" />
+                    </div>
+
+                    <div class="text">
+                      <div class="title">大四方附大香菇</div>
+                      <div class="subtitle">SQUARE SHAKER MUSHROOM TOP</div>
+                      <span class="model">2OZ</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -45,6 +81,10 @@
               <!--scrollDown-->
               <span class="text">SCROLL DOWN</span>
               <span class="line"></span>
+            </div>
+            <div class="swiper-buttons">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
         </div>
@@ -295,5 +335,16 @@
     </div>
 
     <script type="module" src="./assets/js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>
